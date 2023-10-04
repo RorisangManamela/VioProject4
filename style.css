@@ -1,0 +1,156 @@
+/*********************** General Formatting **********************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 20px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: rgb(84, 132, 180);        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(12, 83, 103);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(84, 132, 180);  /* creates padding around scroll thumb */
+}
+
+/*********************** Text **********************/
+
+h1{
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3rem;
+}
+
+h2{
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+/*********************** Navigation **********************/
+
+nav {
+    background-color: rgb(14, 45, 103);
+}
+
+.navigation{
+    color: white;
+    align-items: center;
+    background-color: rgb(14, 45, 103);
+    display: flex;
+    height: 40px;
+    justify-content: space-around;
+
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+/*********************** Navigation **********************/
+
+a{
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+  }
+  
+a:visited {
+    color: white;
+}
+  
+a:hover {
+    color: rgb(51, 207, 212);
+}
+  
+a:active {
+   color: white;
+}
+
+/*********************** Sections **********************/
+
+.mainSection{
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+.introSection{
+    background-color: #071E3D;
+}
+.logo{
+    width: 50%;
+    grid-row: 2/3;
+    grid-column: 1/4;
+    margin-left: 5%;
+}
+.introSection h2{
+    grid-row: 3/4;
+    grid-column: 3/4;
+    margin-bottom: 20%;
+}
+
+
+.projectSection{
+    background-color: #1F4287;
+}
+.projectSection h1{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin-top: 10%;
+}
+
+
+.aboutSection{
+    background-color: #071E3D;
+}
+.aboutSection h1{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin-top: 10%;
+}
+
+
+.contactSection{
+    background-color: #1F4287
+}
+.contactSection h1{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin-top: 10%;
+}
+
+/*********************** Back-to-top button **********************/
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(8, 127, 140); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 60px; /* Rounded corners */
+    font-size: 25px; /* Increase font size */
+  }
+  
+#myBtn:hover {
+    background-color: #0c5c79; /* Add a dark-grey background on hover */
+}
