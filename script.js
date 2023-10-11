@@ -18,3 +18,29 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+////////////////// Tech icons animation (Left) /////////////////
+
+const observerIconLeft = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting) {
+          entry.target.classList.add('showniconLeft');
+      } 
+      /*else {
+          entry.target.classList.remove('showniconLeft');
+      }*/
+  });
+});
+
+const hiddenElementsIconLeft = document.querySelectorAll('.hiddeniconLeft');
+hiddenElementsIconLeft.forEach((el) => observerIconLeft.observe(el));
+
+////////////////// Custom cursor /////////////////
+
+const customCursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+    // Update the cursor position using CSS variables
+    document.documentElement.style.setProperty('--cursor-x', e.clientX + 'px');
+    document.documentElement.style.setProperty('--cursor-y', e.clientY + 'px');
+});
