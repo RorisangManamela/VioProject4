@@ -1,0 +1,9 @@
+Website
+- Move social media links to nav bar
+- Nav bar: transparent, NOT fixed
+
+CV
+- Keep the same colour palette as website
+
+More extravagent changes
+- Design a logo
