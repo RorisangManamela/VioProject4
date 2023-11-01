@@ -69,6 +69,40 @@ const observerIconRight = new IntersectionObserver((entries) => {
 const hiddenElementsIconRight = document.querySelectorAll('.hiddeniconRight');
 hiddenElementsIconRight.forEach((el) => observerIconRight.observe(el));
 
+////////////////// Parallax enter animation (Left) /////////////////
+
+const observerParallaxLeft = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('motionContainerShown');
+        } 
+        /*else {
+            entry.target.classList.remove('showniconLeft');
+        }*/
+    });
+});
+
+const hiddenElementsParallaxLeft = document.querySelectorAll('.motionContainerHidden');
+hiddenElementsParallaxLeft.forEach((el) => observerParallaxLeft.observe(el));
+
+////////////////// Motion comic enter animation (Right) /////////////////
+
+const observerMotionLeft = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('parallaxContainerShown');
+        } 
+        /*else {
+            entry.target.classList.remove('showniconLeft');
+        }*/
+    });
+});
+
+const hiddenElementsMotionLeft = document.querySelectorAll('.parallaxContainerHidden');
+hiddenElementsMotionLeft.forEach((el) => observerMotionLeft.observe(el));
+
 ////////////////// Intro animation  /////////////////
 
 const observerIntro = new IntersectionObserver((entries) => {

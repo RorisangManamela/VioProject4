@@ -413,13 +413,28 @@ button:visited{
     width: 70%;
     border: 2px white solid;
     border-radius: 20px;
+    transition: all .2s ease-in-out;
 }
 
 .thumbnail:hover{
-    width: 70%;
+    transform: scale(1.1); 
     border: 2px #3bb7dd solid;
     border-radius: 20px;
 }
+
+.skill-row p{
+    width: 70%;
+}
+
+.parallaxContainer{
+
+}
+
+.motionContainer{
+
+}
+
+
 /**************************Contact************************/
 .contact-me{
     width: 100%;
@@ -474,6 +489,13 @@ button:visited{
   
 #myBtn:hover {
     background-color: #0c5c79; /* Add a dark-grey background on hover */
+}
+
+/*******************************POP-UP****************************/
+
+#popUpParallax{
+    background-color: rgb(8, 127, 140);
+    z-index: 10;
 }
 
 /*************************** ANIMATIONS ***************************/
@@ -545,6 +567,32 @@ button:visited{
     width: 30%;
 }
 
+.parallaxContainerHidden{
+    opacity: 0;
+    transition: all 1.5s;
+    /*filter: blur(5px);*/
+    transform: translate(-100%);
+}
+
+.parallaxContainerShown{
+    opacity: 1;
+    /*filter: blur(0px);*/
+    transform: translate(0%);
+}
+
+.motionContainerHidden{
+    opacity: 0;
+    transition: all 1.5s;
+    /*filter: blur(5px);*/
+    transform: translate(-100%);
+}
+
+.motionContainerShown{
+    opacity: 1;
+    /*filter: blur(0px);*/
+    transform: translate(0%);
+}
+
 /*****Intro animation******/
 
 .hiddenIntro{
@@ -558,6 +606,19 @@ button:visited{
     opacity: 1;
     filter: blur(0px);
     transform: translate(0%);
+}
+
+/*******************Zack*************************/
+
+.zach{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+}
+
+.zach:hover{
+    opacity: 0;
 }
 
 /*/**************************Media Queries************************/

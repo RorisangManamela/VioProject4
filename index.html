@@ -135,22 +135,54 @@
             </div>
 
             <div id="skills">
+              <script>
+                function createPopupWin(pageURL, pageTitle,
+                      popupWinWidth, popupWinHeight) {
+                  var left = (screen.width - popupWinWidth) / 2;
+                  var top = (screen.height - popupWinHeight) / 4;
+                  
+                  var myWindow = window.open(pageURL, pageTitle,
+                      'resizable=yes, width=' + popupWinWidth
+                      + ', height=' + popupWinHeight + ', top='
+                      + top + ', left=' + left);
+                }
+                function popupwindow(url, title, w, h) {
+                  var left = (screen.width/2)-(w/2);
+                  var top = (screen.height/2)-(h/2);
+                  return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+                } 
+              </script>
+              
+              
+
               <div class="intro-skills">
-                <h2>Projects</h2>
-                <div class="skill-row development">
+                <h1>Projects</h1>
+                <div class="skill-row parallaxContainerHidden">
+                  <video width="500" muted autoplay loop class="zach">
+                    <source src="videos/zach-animated-text.mp4" type="video/mp4" alt="Video of Zach">
+                  </video>
+                  <video width="500" muted autoplay loop class="zach">
+                    <source src="videos/zach-animated.mp4" type="video/mp4" alt="Video of Zach">
+                  </video>
                   <h3>Parallax Scrolling Website</h3><br/>
-                    <a href="https://rorisangmanamela.github.io/VioProject2/" target="_blank">
+                    <a onclick = "createPopupWin('https://rorisangmanamela.github.io/VioProject2/',
+                    'Azure Reaper Parallax Scrolling Website', 1200, 650);">
                         <img class="thumbnail" src="images/parallax-thumbnail.JPG"/> <br/>
-                       </a><br/><br/>
+                    </a><br/>
+                    <!--<button id="popUpParallax" onclick = "createPopupWin('https://rorisangmanamela.github.io/VioProject2/',
+                      'GeeksforGeeks Website', 1200, 650);">
+                    Go on a journey!
+                    </button><br/><br/>-->
                     <p>An interactive website displaying the world and characters of <i>Azure Reaper</i>.
                         Float through the story with the Vivian, the main character with Follow-The-Object 
                         parallax scrolling.</p>
                 </div>
-                <div class="skill-row design">
+                <div class="skill-row motionContainerHidden">
                   <h3>Motion Comic</h3><br/>
-                    <a href="https://xd.adobe.com/view/67188f3f-a833-4222-898a-6071847a8e42-324b/" target="_blank">
+                  <a onclick = "createPopupWin('https://xd.adobe.com/view/67188f3f-a833-4222-898a-6071847a8e42-324b/',
+                    'Azure Reaper Interactive Motion Comic', 1200, 650);">
                         <img class="thumbnail" src="images/motion-comic-thumbnail.JPG"/> <br/>
-                        </a><br/><br/>
+                    </a><br/>
                     <p>A semi-animated, interactive motion comic. With sound effects, voice overs and animations,
                         the <i>Azure Reaper</i> comic book is brought to life.</p>
                 </div>
@@ -163,13 +195,13 @@
               <div class="contact-me">
                 <h2>Get In Touch</h2>
                 <div class="contactSocials">
-                  <a href="https://rorisangmanamela.github.io/VioProject2/" target="_blank">
+                  <a href="mailto:rorisangmanamela88@gmail.com" target="_blank">
                     <img class="socialIcons" src="images/socials/icons8-email-50.png"/> <br/>
                   </a>
-                  <a href="https://rorisangmanamela.github.io/VioProject2/" target="_blank">
+                  <a href="https://www.instagram.com/nonexistentbird/" target="_blank">
                     <img class="socialIcons" src="images/socials/icons8-instagram-50.png"/> <br/>
                   </a>
-                  <a href="https://rorisangmanamela.github.io/VioProject2/" target="_blank">
+                  <a href="https://www.linkedin.com/in/rorisang-manamela-9110a9218/" target="_blank">
                     <img class="socialIcons" src="images/socials/icons8-linkedin-50.png"/> <br/>
                   </a>
                 </div>
@@ -182,6 +214,7 @@
 
             
         </div>
+
         <button onclick="topFunction()" id="myBtn" title="Go to top">🢁</button>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
