@@ -129,3 +129,126 @@ document.addEventListener('mousemove', (e) => {
     document.documentElement.style.setProperty('--cursor-x', e.clientX + 'px');
     document.documentElement.style.setProperty('--cursor-y', e.clientY + 'px');
 });
+
+////////////////// Shifting content to display iFrame /////////////////
+
+  var isIframeVisible = false;
+
+  document.getElementById("shift1").addEventListener("click", function() {
+    var embeddedFrame = document.getElementById("embeddedFrame");
+    if (isIframeVisible) {
+      embeddedFrame.style.display = "none";
+      isIframeVisible = false;
+    } else {
+      embeddedFrame.style.display = "block";
+      embeddedFrame.src = "https://rorisangmanamela.github.io/VioProject2/";
+      isIframeVisible = true;
+    }
+
+    var content = document.getElementById("contentToShift");
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      content.style.marginTop = "50px";
+    } else {
+      content.style.display = "none";
+    }
+  });
+
+  document.getElementById("popUpParallax").addEventListener("click", function() {
+    var embeddedFrame = document.getElementById("embeddedFrame");
+    if (isIframeVisible) {
+      embeddedFrame.style.display = "none";
+      isIframeVisible = false;
+    } else {
+      embeddedFrame.style.display = "block";
+      embeddedFrame.src = "https://rorisangmanamela.github.io/VioProject2/";
+      isIframeVisible = true;
+    }
+
+    var content = document.getElementById("contentToShift");
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      content.style.marginTop = "50px";
+    } else {
+      content.style.display = "none";
+    }
+  });
+
+
+////////////////////////////////// VIVIAN GO BRR /////////////////////////
+
+  document.body.style.cursor = "url('media/images/kunai.png') auto"
+
+gsap.registerPlugin(ScrollTrigger),
+gsap.registerPlugin(MotionPathPlugin),
+
+console.log("ScrollTrigger", ScrollTrigger)
+
+
+
+
+
+
+
+///////////////////////////////////////VIVIAN ANIMATIONS HERE//////////////////////////////////////////////////////
+
+/////////////////////////////////// Main container /////////////////////////////////////
+
+window.addEventListener('scroll', function () {
+  var object = document.getElementById('viv');
+  var scrollPosition = window.scrollY;
+
+  // You can adjust these values based on when you want the transparency to start and end
+  var startTransparent = 100; // Pixels from the top
+  var endTransparent = 300;   // Pixels from the top
+
+  if (scrollPosition >= startTransparent && scrollPosition <= endTransparent) {
+    // Calculate the opacity based on the scroll position
+    var opacity = 1 - (scrollPosition - startTransparent) / (endTransparent - startTransparent);
+
+    // Set the opacity directly
+    object.style.opacity = opacity;
+  } else {
+    // Reset to the initial opacity if outside the specified range
+    object.style.opacity = 1;
+  }
+});
+
+
+
+
+
+
+
+
+///////////////////////////////////////PAGE ANIMATIONS HERE//////////////////////////////////////////////////////
+
+/////////////////////////////////// Main container /////////////////////////////////////
+
+const mainTitlePath = [
+	{ opacity: 0},
+  ]
+  
+  const mainTitleTL = gsap.timeline({
+	  scrollTrigger: {
+	  trigger: ".main-container",
+		  scrub: 2,
+		  start: 90,
+	  },
+  })
+  
+  mainTitleTL.to(".main-container", {
+	  motionPath: {
+		  path: mainTitlePath,
+		  autoRotate: false,
+	  },
+	  duration: 10,
+	ease: Power1.easeInOut,
+  });
+
+
+  /////////////////////////////////////////////NAV HIGHLIGHT///////////////////////////////////////
+
+
+
+

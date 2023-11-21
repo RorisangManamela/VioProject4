@@ -12,54 +12,121 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </head>
 
-    <body id="top">
-        <div class="custom-cursor"></div> <!-- Custom cursor element -->
-        <div class="upper-section" id="navigation">
-          <nav>
-            <!--<img id= "logo" src="images/logo.png" alt="Raeven's logo" width="300px">-->
-            <ul class="socials">
-              <li><div>
-                <a href="#top">
-                  Home
-                </a>
-              </div></li>
-              <li><div>
-                <a href="#mainPageBody">
-                  About Me
-                </a>
-              </div></li>
-              <li><div>
-                <a href="#skills">
-                  Projects
-                </a>
-              </div></li>            
-            </ul>
-          </nav>
-        
+      <nav id="navbar">
+        <!--<img id= "logo" src="images/logo.png" alt="Raeven's logo" width="300px">-->
+        <ul class="mainMenu">
+          <li>
+            <a href="#mainContent">Projects</a>
+          </li> 
+          <li>
+            <a href="#aboutSection">About</a>
+          </li> 
+          <li>
+            <a href="Azure-Reaper-Comic.pdf"> Read Comic</a>
+          </li>    
+          <li>
+            <a href="#contact">Contact</a>
+          </li>       
+        </ul>
+      </nav>
 
-          <div class="top-container" id="top">
-            <video width="500" muted autoplay loop class="logo">
-              <source src="videos/video.webm" type="video/webm" alt="Video of vivian">
-            </video>
+    <body id="top">
+        <video width="500" muted autoplay loop class="logo vivian" id="viv">
+          <source src="videos/video.webm" type="video/webm" alt="Video of vivian">
+        </video>
+        <div class="custom-cursor"></div> <!-- Custom cursor element -->
+        <div class="upper-section" id="navigation">  
+
+          <div class="top-container">
               <div class="main-heading">
-                <img src="images/whiteLogo.png" alt="textLogo" width="600px" class="textLogo"/><br/><br/>
-                <button type="button"><a href="Azure-Reaper-Comic.pdf" target="_blank" class="cv-link"><b>View Comic</b></a></button>
+                <img src="images/whiteLogo.png" alt="textLogo" class="textLogo" id="azureTitle"/><br/><br/>
+                <button type="button"><a href="Azure-Reaper-Comic.pdf" target="_self" class="cv-link"><b>Read the Comic</b></a></button>
+                <button type="button"><a href="Azure-Reaper-Comic.pdf" target="_self" class="cv-link"><b>Projects</b></a></button>
+                <button type="button"><a href="Azure-Reaper-Comic.pdf" target="_self" class="cv-link"><b>About the Author</b></a></button>
               </div>
           </div>
         </div>
 
         <div class="middle-container" id="mainPageBody">
-            <div class="profile">
+            <div id="mainContent" class="glow">
+              <script>
+                function navigateTo(pageURL, target,
+                      popupWinWidth, popupWinHeight) {
+                  var left = (screen.width - popupWinWidth) / 2;
+                  var top = (screen.height - popupWinHeight) / 4;
+                  
+                  var myWindow = window.open(pageURL, target,
+                      'resizable=yes, width=' + popupWinWidth
+                      + ', height=' + popupWinHeight + ', top='
+                      + top + ', left=' + left);
+                }
+                /*
+                function popupwindow(url, title, w, h) {
+                  var left = (screen.width/2)-(w/2);
+                  var top = (screen.height/2)-(h/2);
+                  return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+                }
+                */
+              </script>
+                          
+              <div class="intro-skills">
+                <img src="images/projectTitle.png" alt="textLogo" class="sectionLogo"/><br/><br/>
+                <div id="contentToShift"></div>
+                <iframe id="embeddedFrame" src=""></iframe>
+                <div class="skill-row parallaxContainerHidden">
+                  <h3>Parallax Scrolling Website</h3>
+                  <br/>
+                  <a href = "https://rorisangmanamela.github.io/VioProject2/">
+                        <img class="thumbnail" src="images/parallax-thumbnail.JPG"/> <br/>
+                    </a><br/>
+                    <!--<button id="popUpParallax" onclick = "createPopupWin('https://rorisangmanamela.github.io/VioProject2/',
+                      'GeeksforGeeks Website', 1200, 650);">
+                    Go on a journey!
+                    </button><br/><br/>-->
+                    <p>An interactive website displaying the world and characters of <i>Azure Reaper</i>.
+                        Float through the story with the Vivian, the main character with Follow-The-Object 
+                        parallax scrolling.</p>
+                </div>
+
+                <div class="skill-row motionContainerHidden">
+                  <h3>Motion Comic</h3>
+                  <br/>
+                  <a onclick = "navigateTo('https://xd.adobe.com/view/67188f3f-a833-4222-898a-6071847a8e42-324b/',
+                  // 'Azure Reaper Interactive Motion Comic', 
+                  '_self', 1200, 650);">
+                  <img class="thumbnail" src="images/motion-comic-thumbnail.JPG"/> <br/>
+                  </a>
+                  <br/>
+                  <p>A semi-animated, interactive motion comic. With sound effects, voice overs and animations,
+                      the <i>Azure Reaper</i> comic book is brought to life.
+                  </p>
+
+                  <div id="zachHolder">
+                    <video width="500" muted autoplay loop class="zachText">
+                      <source src="videos/zach-animated-text.webm" type="video/webm" alt="Video of Zach">
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="profile glow" id="aboutSection">
               <div class="intro hiddenIntro">
                 <h1 class="hello">Hello!</h1>
-                <img src="images/picrew-bg.png" alt="Illustration of Rorisang" width="300px" class="picrew"/>
+                <div class="image-container">
+                  <img src="images/face.png" alt="Picture of Rorisang" width="300px" class="picrew meJPG"/>
+                  <img src="images/picrew-bg.png" alt="Illustration of Rorisang" width="300px" class="picrew mePNG"/>
+                </div>
                 <p id="intro-text">
+
                   <span class="myname">My name is Rorisang Manamela.</span><br/><br/>
-                  I am a second-year Multimedia student with a passion for programming and design.<br/> 
+                  I am the author of Azure Reaper: The floating phantom of Deimos City. <br/>
+                  I am a second-year Multimedia student with a passion for art, design and programming.<br/> 
                 </p>
               </div>
               <br/>
-              <div class="technicalskills">
+              <div class="c">
                 <h2>Programming Languages</h2>
                 <br/>
                 <div class="tech-icons-box">
@@ -132,67 +199,12 @@
                 </div>
               </div>
               <br/>
-            </div>
-
-            <div id="skills">
-              <script>
-                function createPopupWin(pageURL, pageTitle,
-                      popupWinWidth, popupWinHeight) {
-                  var left = (screen.width - popupWinWidth) / 2;
-                  var top = (screen.height - popupWinHeight) / 4;
-                  
-                  var myWindow = window.open(pageURL, pageTitle,
-                      'resizable=yes, width=' + popupWinWidth
-                      + ', height=' + popupWinHeight + ', top='
-                      + top + ', left=' + left);
-                }
-                function popupwindow(url, title, w, h) {
-                  var left = (screen.width/2)-(w/2);
-                  var top = (screen.height/2)-(h/2);
-                  return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
-                } 
-              </script>
-              
-              
-
-              <div class="intro-skills">
-                <h1>Projects</h1>
-                <div class="skill-row parallaxContainerHidden">
-                  <video width="500" muted autoplay loop class="zach">
-                    <source src="videos/zach-animated-text.mp4" type="video/mp4" alt="Video of Zach">
-                  </video>
-                  <video width="500" muted autoplay loop class="zach">
-                    <source src="videos/zach-animated.mp4" type="video/mp4" alt="Video of Zach">
-                  </video>
-                  <h3>Parallax Scrolling Website</h3><br/>
-                    <a onclick = "createPopupWin('https://rorisangmanamela.github.io/VioProject2/',
-                    'Azure Reaper Parallax Scrolling Website', 1200, 650);">
-                        <img class="thumbnail" src="images/parallax-thumbnail.JPG"/> <br/>
-                    </a><br/>
-                    <!--<button id="popUpParallax" onclick = "createPopupWin('https://rorisangmanamela.github.io/VioProject2/',
-                      'GeeksforGeeks Website', 1200, 650);">
-                    Go on a journey!
-                    </button><br/><br/>-->
-                    <p>An interactive website displaying the world and characters of <i>Azure Reaper</i>.
-                        Float through the story with the Vivian, the main character with Follow-The-Object 
-                        parallax scrolling.</p>
-                </div>
-                <div class="skill-row motionContainerHidden">
-                  <h3>Motion Comic</h3><br/>
-                  <a onclick = "createPopupWin('https://xd.adobe.com/view/67188f3f-a833-4222-898a-6071847a8e42-324b/',
-                    'Azure Reaper Interactive Motion Comic', 1200, 650);">
-                        <img class="thumbnail" src="images/motion-comic-thumbnail.JPG"/> <br/>
-                    </a><br/>
-                    <p>A semi-animated, interactive motion comic. With sound effects, voice overs and animations,
-                        the <i>Azure Reaper</i> comic book is brought to life.</p>
-                </div>
-              </div>
 
               <hr class="dots"/>
 
               <br/>
 
-              <div class="contact-me">
+              <div class="contact-me glow" id="contact">
                 <h2>Get In Touch</h2>
                 <div class="contactSocials">
                   <a href="mailto:rorisangmanamela88@gmail.com" target="_blank">

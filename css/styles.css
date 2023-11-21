@@ -106,16 +106,16 @@ a:hover{
 }
 
 .back-to-top{
-    color: #166b85;
+    color: #abd9e7;
     /*margin-top: 5px;*/
 }
 
 .back-to-top:visited{
-    color: #166b85;
+    color: #abd9e7;
 }
 
 .back-to-topArt{
-    color: #166b85;
+    color: #abd9e7;
     /*margin-top: 5px;*/
 }
 
@@ -154,42 +154,28 @@ nav{
     z-index: 2;
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 100px;
+    width: 10%;
+    height: 100%;
     font-size: 1.5rem;
-    background-color: #05193a;
-    display: flex;             
-    align-items: center;       
-    justify-content: center;  
-    border-bottom: 5px outset #3bb7dd;
+    background-color: #03142e;
+    border-right: 5px outset #3bb7dd;
 }
 
-.socials{
-    /*margin-top: auto;
-    margin-bottom: auto;*/
-    display: flex;
-    justify-content:space-around;
-    gap: 5%;
-    align-items: center;
-    width: 100%;
+.mainMenu{
+    display: flex; 
+    flex-direction: column;    
+    justify-content: center;     
+    gap: 10%;    
+    /*align-items: space-around;  
+    justify-content: space-evenly;  
+    /*margin-top: auto;*/
     margin: 0 10%;
+    height: 100%;
 }
 
-.socials > li {
+/*.mainMenu > li {
     display: inline;
-}
-
-.socialLinks{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    /*padding: 0;
-    width: 100%;*/
-}
-
-
-
-
+}*/
 
 /**************************Top************************/
 
@@ -204,11 +190,10 @@ nav{
 
 .top-container{
     background-color: #05193a;
+    background-image: linear-gradient(rgb(28, 12, 71), rgb(58, 118, 187));
     display: flex;
-    justify-content: space-around;
-    /*flex-direction: column;*/
-    margin-left: 10%;
-    margin-right: 10%;
+    /*justify-content: space-around;
+    flex-direction: column;*/
     margin-bottom: 50px;
     height: 100vh;
     position: fixed;
@@ -219,32 +204,46 @@ nav{
     top: 15%;
     left: 25%;
     height: 20%;*/
-    width: 40%;
+    width: 30%;
     grid-row: 1/2;
     grid-column: 1/2;
     object-fit: contain;
-    
+}
+
+.vivian{
+    height: 550px;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: 4;
 }
 
 .main-heading{
     line-height: 2;
     grid-row: 1/2;
-    grid-column: 2/3;
-    text-align: center;
+    grid-column: 1/3;
+    /*text-align: center;
     align-self: center;
-    /*flex-grow: 2;*/
-}
+    flex-grow: 2;*/
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 60%;
+    /*margin-left: 30%;*/
+
+}   
 
 .main-heading h1{
     /*position: fixed;
     top: 55%;
     right: 15%;*/
     z-index: 0;
+    width: 60%;
 }
 
 .textLogo{
     animation-name: azureAnimation;
     animation-duration: 5s;
+    width: 90%;
     /*position: fixed;
     top: 70%;
     right: 15%;*/
@@ -281,6 +280,12 @@ button:visited{
 
 /**************************Middle************************/
 
+.sectionLogo{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .middle-container{
     position: relative;
     background: linear-gradient(116deg,#418eb7,#3f83a7,#2d3b50);
@@ -302,7 +307,7 @@ button:visited{
     background: linear-gradient(116deg,#4180b7,#3f76a7,#2d3b50);
     background-size: 180% 180%;
     animation: gradient-animation 12s ease infinite;
-    top: 100vh;
+    top: 50vh;
     padding: 5% 5%;
     width: 100%;
     z-index: 1;
@@ -312,11 +317,17 @@ button:visited{
     font-size: 4rem;
     animation-name: azureAnimation;
     animation-duration: 4s;
+    margin-bottom: 250px;
 }
 
 .picrew{
+    position: fixed;
+    top: 20%;
+    left: 40%;
     margin-bottom: 30px;
     width: 20%;
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
 .intro{
@@ -377,7 +388,9 @@ button:visited{
     top: 0px;
 }
 
-#skills{
+/*****************************************************/
+
+#mainContent{
     background-color: #05193a;
     padding: 10% 5%;
     z-index: 3;
@@ -424,14 +437,6 @@ button:visited{
 
 .skill-row p{
     width: 70%;
-}
-
-.parallaxContainer{
-
-}
-
-.motionContainer{
-
 }
 
 
@@ -585,12 +590,23 @@ button:visited{
     transition: all 1.5s;
     /*filter: blur(5px);*/
     transform: translate(-100%);
+    text-align: right;
 }
 
 .motionContainerShown{
     opacity: 1;
     /*filter: blur(0px);*/
     transform: translate(0%);
+    text-align: right;
+}
+
+.motionContainerShown p{
+    text-align: right;
+    margin-left: auto;
+}
+
+.motionContainerShown h3{
+    text-align: center;
 }
 
 /*****Intro animation******/
@@ -608,17 +624,68 @@ button:visited{
     transform: translate(0%);
 }
 
-/*******************Zack*************************/
+/*******************Zach*************************/
 
-.zach{
-    width: 50%;
+.zachText{
+    width: 40%;
     position: absolute;
-    top: 50%;
-    left: 80%;
+    top:-5%;
+    left: -15%;
+    opacity: 1;
+    transition: opacity 0.5s; 
 }
 
-.zach:hover{
+/*.zachNoText{
+    width: 50%;
+    position: absolute;
+    top:-5%;
+    left: -20%;
+    opacity: 1;
+    transition: opacity 0.5s; 
+}
+
+
+.zachText:hover{
+    opacity: 1;
+}
+
+.zachNoText:hover{
     opacity: 0;
+}*/
+
+/*******************Meee*************************/
+
+.mePNG{
+    opacity: 1;
+    transition: opacity 0.5s; 
+}
+
+.mePNG:hover{
+    opacity: 0;
+    display: none;
+}
+
+.meJPG{
+    opacity: 0;
+    transition: opacity 0.5s; 
+}
+
+.meJPG:hover{
+    opacity: 1;
+}
+
+.image-container {
+    position: relative;
+    width: 50%; /* Adjust the width of the container */
+    overflow: hidden;
+}
+
+.image-container:hover .mePNG {
+    opacity: 0;
+}
+
+.image-container:hover .meJPG {
+    opacity: 1;
 }
 
 /*/**************************Media Queries************************/
@@ -711,3 +778,17 @@ button:visited{
     Default code 
 }
 */
+
+#contentToShoft {
+    display: none;
+    margin-top: 0;
+    transition: margin-top 0.5s;
+  }
+
+  #embeddedFrame {
+    position: relative;
+    left: -17%;
+    width: 134%;
+    height: 700px;
+    display: none;
+  }
